@@ -1,0 +1,7 @@
+{
+  "name": "IONIC-OBS-WS",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

@@ -1,0 +1,80 @@
+.cont-tab{
+    background-color: #ff1751!important;
+}
+
+
+.cont-header{
+    background: #ff1751!important;  
+}
+
+.cont-header-tab1{
+    --background: #ff1751!important; 
+    width: 90%;
+    margin: 0 auto;
+   
+}
+
+.cont-main{
+    --background: #993cde;
+    --background: linear-gradient(132deg, #993cde 0%, #eb3076 41%, #f74042 66%, #ff6744 100%);
+}
+
+.cont-nav{
+    height: 45px;
+    width: 175px;
+    background-image: url('../assets/img/virtualizarme.png');
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+.hex{
+    height: 60px;
+    width: 40%;
+    background-image: url('../assets/img/unnamed.png');
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    filter: brightness(500%);
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.lista-escenas{
+    background: #983cde00;
+    width: 98%;
+    margin: 0 auto;
+}
+
+
+.icon-escena{
+    font-size: 35px;
+    margin-right: 10px;
+    color: #ffffff;
+}
+
+.btn-escena{
+    --background: #f740f71e;
+    width: 100%;   
+    height: 60px;
+    font-size: 15px;
+    text-align: start!important;
+}
+
+@-webkit-keyframes slide-in-bck-center{0%{-webkit-transform:translateZ(600px);transform:translateZ(600px);opacity:0}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}@keyframes slide-in-bck-center{0%{-webkit-transform:translateZ(600px);transform:translateZ(600px);opacity:0}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}
+.slide-in-bck-center{
+    -webkit-animation:slide-in-bck-center .7s cubic-bezier(.25,.46,.45,.94) both;
+    animation:slide-in-bck-center .7s cubic-bezier(.25,.46,.45,.94) both
+}
+
+@-webkit-keyframes tilt-in-top-1{0%{-webkit-transform:rotateY(30deg) translateY(-300px) skewY(-30deg);transform:rotateY(30deg) translateY(-300px) skewY(-30deg);opacity:0}100%{-webkit-transform:rotateY(0deg) translateY(0) skewY(0deg);transform:rotateY(0deg) translateY(0) skewY(0deg);opacity:1}}@keyframes tilt-in-top-1{0%{-webkit-transform:rotateY(30deg) translateY(-300px) skewY(-30deg);transform:rotateY(30deg) translateY(-300px) skewY(-30deg);opacity:0}100%{-webkit-transform:rotateY(0deg) translateY(0) skewY(0deg);transform:rotateY(0deg) translateY(0) skewY(0deg);opacity:1}}
+.tilt-in-top-1{
+    -webkit-animation:tilt-in-top-1 .6s cubic-bezier(.25,.46,.45,.94) both;
+    animation:tilt-in-top-1 .6s cubic-bezier(.25,.46,.45,.94) both
+}
