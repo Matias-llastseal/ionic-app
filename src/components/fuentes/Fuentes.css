@@ -1,0 +1,52 @@
+.titulo-escena{
+    text-align: center; 
+    padding: 20px 0;
+    margin: 0;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.lista-items{
+    background-color: #0fb45400;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.item{
+    padding: 8px 0;
+    background-color: #f168f157;
+    margin: 4px 0;
+    border-radius: 5px;
+}
+
+.cont-item{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon-item{
+    color: white;
+    font-size: 30px;
+}
+
+
+@-webkit-keyframes tilt-in-top-1{0%{-webkit-transform:rotateY(30deg) translateY(-300px) skewY(-30deg);transform:rotateY(30deg) translateY(-300px) skewY(-30deg);opacity:0}100%{-webkit-transform:rotateY(0deg) translateY(0) skewY(0deg);transform:rotateY(0deg) translateY(0) skewY(0deg);opacity:1}}@keyframes tilt-in-top-1{0%{-webkit-transform:rotateY(30deg) translateY(-300px) skewY(-30deg);transform:rotateY(30deg) translateY(-300px) skewY(-30deg);opacity:0}100%{-webkit-transform:rotateY(0deg) translateY(0) skewY(0deg);transform:rotateY(0deg) translateY(0) skewY(0deg);opacity:1}}
+.tilt-in-top-1{
+    -webkit-animation:tilt-in-top-1 .6s cubic-bezier(.25,.46,.45,.94) both;
+    animation:tilt-in-top-1 .6s cubic-bezier(.25,.46,.45,.94) both
+}
+
+.cont-icon-item ion-button{
+    width: 30px;
+    --background: rgba(240, 248, 255, 0.116);
+}
+
+.icon-item{
+    font-size: 20px;
+    margin-left: 10px;
+    margin: 0;
+}

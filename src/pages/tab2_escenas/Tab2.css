@@ -19,23 +19,14 @@
     --background: linear-gradient(132deg, #993cde 0%, #eb3076 41%, #f74042 66%, #ff6744 100%);
 }
 
-.cont-nav{
-    height: 45px;
-    width: 175px;
-    background-image: url('../assets/img/virtualizarme.png');
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-size: cover;
+.img1{
+    width: 50%;
 }
 
-.hex{
-    height: 60px;
-    width: 40%;
-    background-image: url('../assets/img/unnamed.png');
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-size: cover;
-    filter: brightness(500%);
+@media (min-width: 640px) {
+    .img1{
+        width: 30%;
+    }     
 }
 
 .flex{
@@ -78,3 +69,12 @@
     -webkit-animation:tilt-in-top-1 .6s cubic-bezier(.25,.46,.45,.94) both;
     animation:tilt-in-top-1 .6s cubic-bezier(.25,.46,.45,.94) both
 }
+
+.select-escene{
+    transition: all .2s ease-in-out;
+    background-color: rgb(18, 223, 97);
+    border-radius: 5px;
+}
+
+
+

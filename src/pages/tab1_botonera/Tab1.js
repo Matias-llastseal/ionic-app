@@ -1,18 +1,16 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBell, faPlug, faAllergies, faAngleDoubleRight, faAssistiveListeningSystems, faBahai, faBomb, faBolt, faBowlingBall, faBug, faBullhorn } from '@fortawesome/free-solid-svg-icons';
+import { faBell, faAllergies, faAngleDoubleRight, faAssistiveListeningSystems, faBahai, faBomb, faBolt, faBowlingBall, faBug, faBullhorn } from '@fortawesome/free-solid-svg-icons';
 import './Tab1.css';
+import vrt from '../../assets/img/virtualizarme.png';
+import hex from '../../assets/img/unnamed.png';
 
-const Tab1: React.FC = () => {
+const Tab1 = () => {
   return (
     <IonPage>
       <IonHeader class="cont-header">
         <IonToolbar class="cont-header-tab1">
-         <div className="flex">
-            <div className="cont-nav"></div>
-            <div className="hex"></div>
-         </div>         
+            <img src={vrt} className="img1"></img>      
         </IonToolbar>
       </IonHeader>
 

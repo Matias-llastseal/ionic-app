@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import ObsWebSocket_ from '../services/ObsWebSocket';
-import { albumsOutline } from 'ionicons/icons';
+import ObsWebSocket_ from '../../services/ObsWebSocket';
 import './Escenas.css';
 const { IonButton, IonIcon } = require('@ionic/react');
 
-interface ContainerProps {
-}
-
-const Escenas: React.FC<ContainerProps> = () => {
+const Escenas = () => {
     
   const [escenas, setEscenas] = useState(['']);
 
-  const guardarEscenas = (lista_escenas:string[])=>{
+  const guardarEscenas = (lista_escenas)=>{
     setEscenas(lista_escenas);
   }
 

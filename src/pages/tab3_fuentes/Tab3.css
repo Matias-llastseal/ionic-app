@@ -1,0 +1,32 @@
+.cont-header{
+    background: #ff1751!important;  
+}
+
+.cont-header-tab1{
+    --background: #ff1751!important; 
+    width: 90%;
+    margin: 0 auto;
+   
+}
+
+.cont-main{
+    --background: #993cde;
+    --background: linear-gradient(132deg, #993cde 0%, #eb3076 41%, #f74042 66%, #ff6744 100%);
+}
+
+.img1{
+    width: 50%;
+}
+
+@media (min-width: 640px) {
+    .img1{
+        width: 30%;
+    }     
+}
+
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

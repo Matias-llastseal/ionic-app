@@ -1,18 +1,17 @@
   import React, { useState, useEffect } from 'react';
   import { IonContent, IonIcon,IonList, IonButton, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-  import Escenas from '../components/Escenas';
+  import Escenas from '../../components/escenas/Escenas.js'
   import './Tab2.css';
+  import vrt from '../../assets/img/virtualizarme.png';
+  import hex from '../../assets/img/unnamed.png';
 
-  const Tab2: React.FC = () => {
+  const Tab2 = () => {
 
     return (
       <IonPage >
         <IonHeader class="cont-header">
           <IonToolbar class="cont-header-tab1">
-          <div className="flex">
-              <div className="cont-nav"></div>
-              <div className="hex"></div>
-          </div>      
+            <img src={vrt} className="img1"></img>    
           </IonToolbar>
         </IonHeader>
 

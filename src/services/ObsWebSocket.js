@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { albumsOutline } from 'ionicons/icons';
+import { albumsOutline, cropOutline } from 'ionicons/icons';
 const { IonButton, IonIcon } = require('@ionic/react');
 
 const OBSWebSocket_ = ({escenas, guardarEscenas}) => {
@@ -11,16 +11,18 @@ const OBSWebSocket_ = ({escenas, guardarEscenas}) => {
 
     const Conectar = ()=>{
         const OBS = obs.connect({
-            address: '192.168.100.10:4444',
-            password: 'mat.altamirano',
+            address: '192.168.100.10:5000',
+            //address: 'localhost:4444',
+            //address: '192.168.100.4:4444',
+            //password: 'mat.altamirano',
         }).then(()=>{
             console.log('-> Estas conectado a OBS Studio <-');  
         })
 
         return OBS;
     }
-  
-    const MostrarEscenas = ()=>{
+
+    function MostrarEscenas(){
         Conectar().then(()=>{
             obs.send('GetSceneList').then((res)=>{
                 let lista_escenas = [];
@@ -30,27 +32,35 @@ const OBSWebSocket_ = ({escenas, guardarEscenas}) => {
                 }
 
                 //uso de funcion para cambiar el state de escenas
-                guardarEscenas(lista_escenas) 
+                guardarEscenas(lista_escenas);
             });
         });           
     }
 
-    const CambiarEscena = ()=>{
+    function CambiarEscena(escena){
         Conectar().then(()=>{
-            console.log("conectado por segunda vez");
+            obs.send('SetCurrentScene', {"scene-name": escena}).then(()=>{
+                let listaBotones = document.querySelectorAll('.btn-escena');
+                let select = document.getElementById(escena)
+
+                for (let i=0; i < listaBotones.length; i++) {
+                    listaBotones[i].classList.remove('select-escene');                      
+                }
+     
+                select.classList.add('select-escene');              
+            })           
         });
     }
-
-
+ 
     //----------------- RENDER --------------------//
     return (
-        <div > 
-            <IonButton onClick={MostrarEscenas} expand="full">escenas</IonButton>
-            
+        <div> 
+            <IonButton onClick={MostrarEscenas} expand='block' >escenas</IonButton>
+              
             {escenas.length > 1 &&
                 <div>
                 {escenas.map((esc, num=0) => (
-                <IonButton key={num+=1} class="btn-escena" onClick={CambiarEscena}>  
+                <IonButton key={num+=1} id={esc} class="btn-escena" onClick={(e) => CambiarEscena(esc, e)}>  
                     <IonIcon class="icon-escena" icon={albumsOutline} />
                     {esc}
                 </IonButton>
@@ -59,7 +69,6 @@ const OBSWebSocket_ = ({escenas, guardarEscenas}) => {
             }
         </div>
     );
-
 };
 
 export default OBSWebSocket_;
